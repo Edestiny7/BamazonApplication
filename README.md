@@ -1,5 +1,5 @@
 # BamazonApplication
-Bamazon is an Amazon-like storefront that works with the command line node app, which takes in parameters and gives back data from a SQL database.  Users will be shown items available for purchase. They will specify which products they want want to purchase by product ID and quantity.  If enough stock is available, they will be told their total and thanked for their purchase.  Otherwise they will be told there is not enough available at the time, and to try back at another time. 
+Bamazon is an Amazon-like storefront that works with the command line node app, which takes in parameters and gives back data from a SQL database.  Users will be shown items available for purchase. They will specify which products they want to purchase by product ID and quantity.  If enough stock is available, they will be told their total and thanked for their purchase.  Otherwise they will be told there is not enough available at the time, and to try back at another time. 
 
 # How to use
 1. Open a console app such as Bash.
