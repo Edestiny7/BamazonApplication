@@ -3,7 +3,7 @@ Bamazon is an Amazon-like storefront that works with the command line node app, 
 
 # How to use
 1. Open a console app such as Bash.
-2. Navigate to the `bamazonCustomer.js` file in `BamazonApplication/assets/javascript/`
+2. Navigate to the `bamazonCustomer.js` file in `BamazonApplication/`
 3. Enter the following command:
     * `node bamazonCustomer`
         * Results: Items in the Bamazon inventory will be displayed along with a prompt to enter the ID of the item you would like to purchase
