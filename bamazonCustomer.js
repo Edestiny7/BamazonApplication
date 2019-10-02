@@ -2,10 +2,12 @@ let mysql = require("mysql");
 let inquirer = require("inquirer");
 let table = require("cli-table");
 
+let PORT = process.env.PORT || 3306;
+
 // connection info for sql database
-let connection = mysql.createConnection({
+const connection = mysql.createConnection({
     host: "localhost",
-    port: 3306,
+    port: PORT,
     user: "root",
     password: "root",
     database: "bamazon"
@@ -61,8 +63,8 @@ let inquire = function() {
 }
 
 // Process request
-function purchase(ID, qty) {
-    connection.query("SELECT * FROM products WHERE item_id =" + ID, function(err, res) {
+function purchase(id, qty) {
+    connection.query("SELECT * FROM products WHERE item_id =" + id, function(err, res) {
         if (err) {
             console.log(err)
         };
@@ -70,7 +72,7 @@ function purchase(ID, qty) {
             let total = res[0].price * qty;
             console.log(`Total for ${qty} - ${res[0].product_name} is ${total}. 
 Thank you for shopping with Bamazon!`);
-            connection.query("UPDATE products SET stock_quantity = (stock_quantity - " + qty + ") WHERE item_id =" + ID);
+            connection.query("UPDATE products SET stock_quantity = (stock_quantity - " + qty + ") WHERE item_id =" + id);
         } else {
             console.log(`Unfortunately, stock of ${res[0].product_name} is insufficient to fulfill your order at this time. Please try again later.`);
         };
